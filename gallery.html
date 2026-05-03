@@ -55,9 +55,7 @@
 
     <div class="slider">
       <button class="arrow left" onclick="prevSlide()"></button>
-
-      <img id="slideImg" src="img/1.jpg" class="slide-img">
-
+      <img id="slideImg" class="slide-img">
       <button class="arrow right" onclick="nextSlide()"></button>
     </div>
 
@@ -115,19 +113,30 @@ const slides = [
 let index = 0;
 const img = document.getElementById("slideImg");
 
-function show() {
-  img.src = slides[index];
+function render(next) {
+  img.style.opacity = 0;
+
+  setTimeout(() => {
+    index = next;
+    img.src = slides[index];
+    img.style.opacity = 1;
+  }, 300);
 }
 
 function nextSlide() {
-  index = (index + 1) % slides.length;
-  show();
+  render((index + 1) % slides.length);
 }
 
 function prevSlide() {
-  index = (index - 1 + slides.length) % slides.length;
-  show();
+  render((index - 1 + slides.length) % slides.length);
 }
+
+setInterval(() => {
+  nextSlide();
+}, 4000);
+
+img.src = slides[index];
+img.style.opacity = 1;
 </script>
 
 </body>
