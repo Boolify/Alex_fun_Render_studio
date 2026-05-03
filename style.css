@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #070f1c; /* ещё более глубокий тёмно-синий */
+  background: #070f1c;
   color: #e5e7eb;
 }
 
@@ -18,14 +18,13 @@ html, body {
 .header-inner,
 .nav-inner,
 .content,
-.footer {
+.footer-inner {
   width: min(1100px, calc(100% - 24px));
   margin: 0 auto;
 }
 
-/* HEADER */
 .top-header {
-  background: #06281e; /* тёмный хвойный зелёный */
+  background: #06281e;
   border-bottom: 2px solid #031913;
 }
 
@@ -56,7 +55,7 @@ html, body {
 
 .brand-center {
   text-align: center;
-  background: #0a3a2a; /* чуть светлее зелёного для акцента */
+  background: #0a3a2a;
   padding: 5px 18px;
   border-radius: 6px;
   font-size: 16px;
@@ -64,7 +63,6 @@ html, body {
   color: #d1fae5;
 }
 
-/* NAV */
 .nav-row {
   background: #06281e;
   border-bottom: 2px solid #031913;
@@ -83,7 +81,6 @@ html, body {
   width: 100%;
 }
 
-/* BUTTONS */
 .pill {
   display: flex;
   align-items: center;
@@ -91,7 +88,7 @@ html, body {
   width: 100%;
   padding: 12px 0;
   border-radius: 16px;
-  background: #9a3412; /* тёмный burnt orange */
+  background: #9a3412;
   text-decoration: none;
   color: #f3f4f6;
   font-size: 16px;
@@ -107,7 +104,6 @@ html, body {
   color: #fff;
 }
 
-/* SOCIAL */
 .social-top {
   display: grid;
   justify-items: center;
@@ -125,7 +121,6 @@ html, body {
 
 .social-icons {
   display: flex;
-  justify-content: center;
   gap: 6px;
 }
 
@@ -136,7 +131,6 @@ html, body {
   background: #9a3412;
 }
 
-/* CONTENT */
 .content {
   padding: 10px 0 20px;
 }
@@ -157,12 +151,11 @@ h2 {
   font-weight: normal;
 }
 
-/* TEXT BLOCKS */
 .text-block {
   margin: 10px 0 20px;
   font-size: 15px;
   line-height: 1.4;
-  background: #0e1726; /* холодный тёмный блок */
+  background: #0e1726;
   padding: 12px;
   border-radius: 10px;
   border: 1px solid #1f2937;
@@ -181,7 +174,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* CONTACT */
 .contact-block {
   background: #0e1726;
   padding: 15px;
@@ -201,16 +193,11 @@ h2 {
   color: #cbd5e1;
 }
 
-.icon {
-  font-size: 18px;
-}
-
 .info-value {
   font-size: 18px;
   margin-top: 5px;
 }
 
-/* FORM */
 .form-card {
   margin-top: 20px;
 }
@@ -220,12 +207,11 @@ h2 {
   width: 100%;
   padding: 10px;
   margin-bottom: 12px;
-  border: none;
+  border: 1px solid #1f2937;
   border-radius: 10px;
   background: #070f1c;
   color: #e5e7eb;
   font-size: 14px;
-  border: 1px solid #1f2937;
 }
 
 .form-card textarea {
@@ -247,7 +233,6 @@ h2 {
   background: #7c2d12;
 }
 
-/* GALLERY */
 .slider {
   width: 100%;
   height: 180px;
@@ -271,11 +256,12 @@ h2 {
   transform: translateY(-50%);
 }
 
-.arrow.left { left: -12px; }
-.arrow.right { right: -12px; }
+.arrow.left {
+  left: -12px;
+}
 
-.section-title {
-  margin: 10px 0;
+.arrow.right {
+  right: -12px;
 }
 
 .gallery-item {
@@ -291,36 +277,45 @@ h2 {
   border-radius: 8px;
 }
 
-.price {
-  font-size: 14px;
-  margin-top: 20px;
-}
-
-/* FOOTER */
 .footer {
-  margin-top: 20px;
+  margin-top: 30px;
   background: #06281e;
   border-top: 2px solid #031913;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
-  flex-wrap: wrap;
-  color: #d1fae5;
+  align-items: start;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .footer-brand {
   font-size: 18px;
-  margin-bottom: 10px;
 }
 
 .copyright {
   font-size: 13px;
+  color: #a7f3d0;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  text-align: right;
 }
 
 .footer-slogan {
   font-size: 15px;
-  margin-bottom: 10px;
 }
 
 .footer-social {
@@ -333,15 +328,15 @@ h2 {
   width: 28px;
   height: 28px;
   background: #9a3412;
+  border-radius: 50%;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .header-inner {
     grid-template-columns: 1fr;
     gap: 8px;
-    padding: 8px 0;
     height: auto;
+    padding: 8px 0;
   }
 
   .nav-inner {
@@ -352,11 +347,13 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .social-top {
-    align-items: center;
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
-  .footer {
-    flex-direction: column;
+  .footer-right {
+    align-items: center;
+    text-align: center;
   }
 }
