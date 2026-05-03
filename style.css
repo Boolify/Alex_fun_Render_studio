@@ -6,8 +6,8 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  color: #111;
+  background: #070f1c; /* ещё более глубокий тёмно-синий */
+  color: #e5e7eb;
 }
 
 .page {
@@ -23,9 +23,10 @@ html, body {
   margin: 0 auto;
 }
 
+/* HEADER */
 .top-header {
-  background: #a6a6a6;
-  border-bottom: 2px solid #2e2e2e;
+  background: #06281e; /* тёмный хвойный зелёный */
+  border-bottom: 2px solid #031913;
 }
 
 .header-inner {
@@ -45,26 +46,28 @@ html, body {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: #e8e8e8;
+  background: #d1d5db;
 }
 
 .logo-text {
   font-size: 14px;
-  color: #444;
+  color: #cbd5e1;
 }
 
 .brand-center {
   text-align: center;
-  background: #dcdcdc;
+  background: #0a3a2a; /* чуть светлее зелёного для акцента */
   padding: 5px 18px;
   border-radius: 6px;
   font-size: 16px;
   white-space: nowrap;
+  color: #d1fae5;
 }
 
+/* NAV */
 .nav-row {
-  background: #a6a6a6;
-  border-bottom: 2px solid #2e2e2e;
+  background: #06281e;
+  border-bottom: 2px solid #031913;
 }
 
 .nav-inner {
@@ -80,6 +83,7 @@ html, body {
   width: 100%;
 }
 
+/* BUTTONS */
 .pill {
   display: flex;
   align-items: center;
@@ -87,21 +91,23 @@ html, body {
   width: 100%;
   padding: 12px 0;
   border-radius: 16px;
-  background: #dcdcdc;
+  background: #9a3412; /* тёмный burnt orange */
   text-decoration: none;
-  color: #222;
+  color: #f3f4f6;
   font-size: 16px;
   transition: 0.2s;
 }
 
 .pill:hover {
-  background: #cfcfcf;
+  background: #7c2d12;
 }
 
 .pill.active {
-  background: #bfbfbf;
+  background: #5b1a0a;
+  color: #fff;
 }
 
+/* SOCIAL */
 .social-top {
   display: grid;
   justify-items: center;
@@ -110,7 +116,8 @@ html, body {
 }
 
 .social-label {
-  background: #dcdcdc;
+  background: #0a3a2a;
+  color: #d1fae5;
   padding: 6px 12px;
   border-radius: 16px;
   font-size: 14px;
@@ -126,9 +133,10 @@ html, body {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: #111;
+  background: #9a3412;
 }
 
+/* CONTENT */
 .content {
   padding: 10px 0 20px;
 }
@@ -149,10 +157,15 @@ h2 {
   font-weight: normal;
 }
 
+/* TEXT BLOCKS */
 .text-block {
   margin: 10px 0 20px;
   font-size: 15px;
   line-height: 1.4;
+  background: #0e1726; /* холодный тёмный блок */
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
 }
 
 .text-block p {
@@ -168,10 +181,12 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* CONTACT */
 .contact-block {
-  background: #d7d7d7;
+  background: #0e1726;
   padding: 15px;
   border-radius: 10px;
+  border: 1px solid #1f2937;
 }
 
 .info-item {
@@ -183,7 +198,7 @@ h2 {
   align-items: center;
   gap: 8px;
   font-size: 18px;
-  color: #555;
+  color: #cbd5e1;
 }
 
 .icon {
@@ -195,6 +210,7 @@ h2 {
   margin-top: 5px;
 }
 
+/* FORM */
 .form-card {
   margin-top: 20px;
 }
@@ -206,8 +222,10 @@ h2 {
   margin-bottom: 12px;
   border: none;
   border-radius: 10px;
-  background: #f3f3f3;
+  background: #070f1c;
+  color: #e5e7eb;
   font-size: 14px;
+  border: 1px solid #1f2937;
 }
 
 .form-card textarea {
@@ -216,43 +234,45 @@ h2 {
 }
 
 .form-card button {
-  background: #000;
-  color: #fff;
+  background: #9a3412;
+  color: #f3f4f6;
   border: none;
   padding: 10px 20px;
   border-radius: 10px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
+.form-card button:hover {
+  background: #7c2d12;
+}
+
+/* GALLERY */
 .slider {
   width: 100%;
   height: 180px;
-  background: #cfcfcf;
+  background: #0e1726;
   border-radius: 10px;
   margin: 15px 0;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #1f2937;
 }
 
 .arrow {
   width: 25px;
   height: 25px;
-  background: #999;
+  background: #9a3412;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.arrow.left {
-  left: -12px;
-}
-
-.arrow.right {
-  right: -12px;
-}
+.arrow.left { left: -12px; }
+.arrow.right { right: -12px; }
 
 .section-title {
   margin: 10px 0;
@@ -266,8 +286,9 @@ h2 {
 .img {
   width: 120px;
   height: 120px;
-  background: #cfcfcf;
+  background: #1f2937;
   margin: 10px auto;
+  border-radius: 8px;
 }
 
 .price {
@@ -275,15 +296,17 @@ h2 {
   margin-top: 20px;
 }
 
+/* FOOTER */
 .footer {
   margin-top: 20px;
-  background: #d7d7d7;
-  border-top: 2px solid #2e2e2e;
+  background: #06281e;
+  border-top: 2px solid #031913;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  color: #d1fae5;
 }
 
 .footer-brand {
@@ -309,8 +332,10 @@ h2 {
 .social-icon.dark {
   width: 28px;
   height: 28px;
+  background: #9a3412;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .header-inner {
     grid-template-columns: 1fr;
