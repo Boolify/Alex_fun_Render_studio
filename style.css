@@ -1,3 +1,4 @@
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
 * {
   box-sizing: border-box;
 }
@@ -24,6 +25,7 @@ html, body {
   margin: 0 auto;
 }
 
+/* ===== ШАПКА ===== */
 .top-header {
   background: rgba(11, 42, 42, 0.85);
   backdrop-filter: blur(10px);
@@ -54,6 +56,7 @@ html, body {
   font-weight: 500;
 }
 
+/* ===== НАВИГАЦИЯ ===== */
 .nav-row {
   background: rgba(11, 42, 42, 0.85);
   backdrop-filter: blur(10px);
@@ -93,6 +96,7 @@ html, body {
   background: #b45309;
 }
 
+/* ===== СОЦСЕТИ ===== */
 .social-top {
   display: grid;
   justify-items: center;
@@ -125,6 +129,7 @@ html, body {
   transform: scale(1.1);
 }
 
+/* ===== КОНТЕНТ ===== */
 .content {
   padding: 18px 0 30px;
 }
@@ -169,10 +174,21 @@ h2 {
   gap: 8px 16px;
 }
 
+/* ===== ГАЛЕРЕЯ ===== */
+.gallery-intro {
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.gallery-intro p {
+  text-align: center;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
+  margin: 20px 0;
 }
 
 .work-card {
@@ -193,41 +209,75 @@ h2 {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  display: block;
 }
 
 .work-title {
   padding: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+  text-align: center;
 }
 
+.price-card {
+  text-align: left;
+}
+
+.price-card p {
+  margin: 6px 0;
+  text-align: left;
+}
+
+/* ===== СЛАЙДЕР ===== */
 .slider {
-  height: 450px;
+  position: relative;
+  height: 420px;
+  margin: 18px 0 28px;
+  overflow: hidden;
+  border-radius: 16px;
   background: rgba(11, 42, 42, 0.7);
   backdrop-filter: blur(8px);
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  margin: 18px 0;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
 }
 
-.slider img {
+.slider-track {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.55s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .slider-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+  width: 46px;
+  height: 46px;
   border: none;
+  border-radius: 50%;
   background: #b45309;
-  color: white;
-  cursor: pointer;
+  color: #fff;
   font-size: 18px;
+  cursor: pointer;
   z-index: 2;
   transition: 0.2s;
 }
@@ -244,50 +294,83 @@ h2 {
   right: 10px;
 }
 
-.footer {
-  margin-top: auto;
-  background: rgba(11, 42, 42, 0.85);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding: 14px 0;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.footer-brand {
+/* ===== БЛОГ ===== */
+.blog-intro {
+  text-align: center;
+  margin-bottom: 24px;
   font-size: 16px;
+  color: #ccc;
+}
+
+.blog-section {
+  margin: 28px 0;
+}
+
+.blog-section h2 {
+  color: #f97316;
+  margin-bottom: 14px;
+  font-size: 22px;
+}
+
+.blog-section h3 {
+  margin: 18px 0 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.benefits-list li {
+  padding: 6px 0;
+  line-height: 1.5;
+}
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.steps-list li {
+  padding: 10px 0 10px 24px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.steps-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #b45309;
+}
+
+.steps-list strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.meta-tag {
+  display: inline-block;
+  background: rgba(180, 83, 9, 0.2);
+  color: #f97316;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
   font-weight: 500;
+  margin-bottom: 12px;
 }
 
-.copyright {
-  font-size: 13px;
-  color: #aaa;
-}
-
-.footer-right {
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: flex-end;
-}
-
-.footer-social {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
+/* ===== ФОРМА ===== */
 .form {
   display: flex;
   flex-direction: column;
@@ -344,11 +427,58 @@ h2 {
   transform: translateY(-1px);
 }
 
+/* ===== ФУТЕР ===== */
+.footer {
+  margin-top: auto;
+  background: rgba(11, 42, 42, 0.85);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 14px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-brand {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ===== УТИЛИТЫ ===== */
 .muted {
   color: #aaa;
   font-size: 14px;
 }
 
+/* ===== АДАПТИВ ===== */
 @media (max-width: 768px) {
   .nav-links {
     grid-template-columns: repeat(2, 1fr);
@@ -375,6 +505,11 @@ h2 {
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .form button {
+    width: 100%;
+    text-align: center;
   }
 
   .slider {
