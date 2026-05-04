@@ -12,18 +12,12 @@
 
   <header class="top-header">
     <div class="header-inner">
-
       <div class="brand-left">
         <img class="logo" src="img/logo.jpeg" alt="logo">
         <div class="logo-text">AlexFUN</div>
       </div>
-
-      <div class="brand-center">
-        AlexFUN’s Render Studio
-      </div>
-
+      <div class="brand-center">AlexFUN’s Render Studio</div>
       <div></div>
-
     </div>
   </header>
 
@@ -37,21 +31,6 @@
         <a class="pill" href="contacts.html">Контакты</a>
       </div>
 
-      <div class="social-top">
-        <div class="social-label">Соцсети</div>
-        <div class="social-icons">
-          <a href="https://youtube.com/@alexfun_yt?si=rc8wTj687oJBsgTy" target="_blank" rel="noopener noreferrer">
-            <img class="social-icon" src="img/yt.jpeg" alt="YouTube">
-          </a>
-          <a href="https://discord.gg/whpRHEESE" target="_blank" rel="noopener noreferrer">
-            <img class="social-icon" src="img/ds.jpeg" alt="Discord">
-          </a>
-          <a href="https://t.me/AlexFUNRenderStudio" target="_blank" rel="noopener noreferrer">
-            <img class="social-icon" src="img/tg.jpeg" alt="Telegram">
-          </a>
-        </div>
-      </div>
-
     </div>
   </nav>
 
@@ -59,110 +38,37 @@
 
     <h1 class="center">Галерея</h1>
 
-    <div class="slider-wrapper">
-      <button class="slider-btn" onclick="prevSlide()">‹</button>
-
-      <div class="slider-window">
-        <div class="slider-track" id="track">
-          <img src="img/1.jpg">
-          <img src="img/2.jpg">
-          <img src="img/3.jpg">
-          <img src="img/4.jpg">
-          <img src="img/5.jpg">
-        </div>
-      </div>
-
-      <button class="slider-btn" onclick="nextSlide()">›</button>
+    <div class="slider">
+      <img id="slide" src="img/slide1.jpg">
     </div>
 
-    <h2 class="center">Примеры работ</h2>
-
-    <div class="text-block">
-      <p>Динамичный рендер для шутера</p>
-      <p>Кинематографичный постер для RPG</p>
-      <p>Стилизованный портрет</p>
-    </div>
+    <h2>Примеры работ</h2>
 
     <div class="gallery-grid">
-
-      <div class="card">
-        <img src="img/6.jpg">
-        <p>Динамичный рендер</p>
-      </div>
-
-      <div class="card">
-        <img src="img/7.jpg">
-        <p>Кинематографичный постер</p>
-      </div>
-
-      <div class="card">
-        <img src="img/8.jpg">
-        <p>Стилизованный портрет</p>
-      </div>
-
-    </div>
-
-    <div class="text-block mt">
-      <p>
-        Стоимость заказа обычно обсуждается вместе с заказчиком.
-        Но минимальная цена составляет 1000р за портрет,
-        1500р за динамичный рендер и 2000р за кинематографичный постер.
-      </p>
+      <img src="img/work1.jpg">
+      <img src="img/work2.jpg">
+      <img src="img/work3.jpg">
     </div>
 
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
-
-      <div class="footer-left">
-        <div class="footer-brand">AlexFUN’s Render Studio</div>
-        <div class="copyright">© AlexFUN’s Render Studio. All rights reserved</div>
-      </div>
-
-      <div class="footer-right">
-        <div class="footer-slogan">Превращаем ваш геймплей в искусство</div>
-        <div class="footer-social">
-          Соцсети:
-          <a href="https://youtube.com/@alexfun_yt?si=rc8wTj687oJBsgTy" target="_blank" rel="noopener noreferrer">
-            <img class="social-icon dark" src="img/yt.jpeg" alt="YouTube">
-          </a>
-          <a href="https://discord.gg/whpRHEESE" target="_blank" rel="noopener noreferrer">
-            <img class="social-icon dark" src="img/ds.jpeg" alt="Discord">
-          </a>
-          <a href="https://t.me/AlexFUNRenderStudio" target="_blank" rel="noopener noreferrer">
-            <img class="social-icon dark" src="img/tg.jpeg" alt="Telegram">
-          </a>
-        </div>
-      </div>
-
+      <div>© AlexFUN</div>
+      <div>Render Studio</div>
     </div>
   </footer>
 
 </div>
 
 <script>
-let index = 0;
-const track = document.getElementById("track");
-const count = track.children.length;
+let images = ["img/slide1.jpg","img/slide2.jpg","img/slide3.jpg","img/slide4.jpg","img/slide5.jpg"];
+let i = 0;
 
-function update() {
-  track.style.transform = `translateX(${-index * 100}%)`;
-}
-
-function nextSlide() {
-  index = (index + 1) % count;
-  update();
-}
-
-function prevSlide() {
-  index = (index - 1 + count) % count;
-  update();
-}
-
-setInterval(() => {
-  nextSlide();
-}, 4000);
+setInterval(()=>{
+  i = (i+1)%images.length;
+  document.getElementById("slide").src = images[i];
+},3000);
 </script>
 
 </body>
