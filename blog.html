@@ -44,50 +44,32 @@
     }
 
     .benefits-list li {
-      padding: 8px 0 8px 28px;
-      position: relative;
+      padding: 6px 0;
       line-height: 1.5;
     }
 
-    .benefits-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: #f97316;
-      font-weight: bold;
-    }
-
     .steps-list {
-      counter-reset: step;
       list-style: none;
       padding: 0;
       margin: 16px 0;
     }
 
     .steps-list li {
-      counter-increment: step;
-      padding: 14px 16px 14px 52px;
+      padding: 10px 0 10px 24px;
       position: relative;
-      border-left: 2px solid rgba(255,255,255,0.1);
-      margin-left: 10px;
+      line-height: 1.5;
     }
 
     .steps-list li::before {
-      content: counter(step);
+      content: "";
       position: absolute;
-      left: -11px;
+      left: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 28px;
-      height: 28px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #b45309;
-      color: white;
-      font-weight: 600;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .steps-list strong {
@@ -114,12 +96,6 @@
       font-size: 12px;
       font-weight: 500;
       margin-bottom: 12px;
-    }
-
-    @media (max-width: 768px) {
-      .steps-list li {
-        padding-left: 48px;
-      }
     }
   </style>
 </head>
