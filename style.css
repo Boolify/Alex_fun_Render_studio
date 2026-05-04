@@ -6,7 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #06161a;
+  background: radial-gradient(ellipse at 20% 0%, #0f1f38 0%, #06161a 45%, #08141c 100%);
   color: #f2f2f2;
 }
 
@@ -25,7 +25,8 @@ html, body {
 }
 
 .top-header {
-  background: #0b2a2a;
+  background: rgba(11, 42, 42, 0.85);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -54,7 +55,8 @@ html, body {
 }
 
 .nav-row {
-  background: #0b2a2a;
+  background: rgba(11, 42, 42, 0.85);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -76,7 +78,7 @@ html, body {
   justify-content: center;
   padding: 10px 12px;
   border-radius: 14px;
-  background: #133636;
+  background: rgba(19, 54, 54, 0.9);
   color: #f2f2f2;
   text-decoration: none;
   transition: 0.2s;
@@ -84,7 +86,7 @@ html, body {
 }
 
 .pill:hover {
-  background: #1a4a4a;
+  background: rgba(26, 74, 74, 0.95);
 }
 
 .pill.active {
@@ -142,8 +144,9 @@ h2 {
 }
 
 .card {
-  background: #0b2a2a;
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(11, 42, 42, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
   padding: 16px;
   margin: 14px 0;
@@ -152,7 +155,8 @@ h2 {
 
 .card:hover {
   transform: translateY(-3px);
-  border-color: #b45309;
+  border-color: rgba(180, 83, 9, 0.6);
+  box-shadow: 0 8px 24px rgba(15, 31, 56, 0.4);
 }
 
 .text-block {
@@ -172,10 +176,11 @@ h2 {
 }
 
 .work-card {
-  background: #0b2a2a;
+  background: rgba(11, 42, 42, 0.7);
+  backdrop-filter: blur(8px);
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
   transition: 0.2s;
 }
 
@@ -196,12 +201,13 @@ h2 {
 
 .slider {
   height: 450px;
-  background: #0b2a2a;
+  background: rgba(11, 42, 42, 0.7);
+  backdrop-filter: blur(8px);
   border-radius: 16px;
   overflow: hidden;
   position: relative;
   margin: 18px 0;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .slider img {
@@ -240,7 +246,8 @@ h2 {
 
 .footer {
   margin-top: auto;
-  background: #0b2a2a;
+  background: rgba(11, 42, 42, 0.85);
+  backdrop-filter: blur(10px);
   border-top: 1px solid rgba(255,255,255,0.08);
   padding: 14px 0;
 }
@@ -284,24 +291,26 @@ h2 {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 14px;
 }
 
 .form input,
 .form textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: 13px 15px;
   border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: #133636;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(19, 54, 54, 0.8);
+  backdrop-filter: blur(4px);
   color: #f2f2f2;
   font-size: 14px;
+  font-family: inherit;
   outline: none;
   transition: 0.2s;
 }
@@ -309,21 +318,22 @@ h2 {
 .form input:focus,
 .form textarea:focus {
   border-color: #b45309;
+  box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.15);
 }
 
 .form textarea {
-  min-height: 120px;
+  min-height: 130px;
   resize: vertical;
 }
 
 .form button {
-  padding: 12px 24px;
+  padding: 13px 28px;
   border-radius: 10px;
   border: none;
   background: #b45309;
   color: white;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
   align-self: flex-start;
@@ -331,6 +341,7 @@ h2 {
 
 .form button:hover {
   background: #f97316;
+  transform: translateY(-1px);
 }
 
 .muted {
