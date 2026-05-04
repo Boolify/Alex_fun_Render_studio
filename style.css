@@ -80,6 +80,7 @@ html, body {
   color: #f2f2f2;
   text-decoration: none;
   transition: 0.2s;
+  font-size: 14px;
 }
 
 .pill:hover {
@@ -158,6 +159,12 @@ h2 {
   line-height: 1.5;
 }
 
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -214,6 +221,9 @@ h2 {
   background: #b45309;
   color: white;
   cursor: pointer;
+  font-size: 18px;
+  z-index: 2;
+  transition: 0.2s;
 }
 
 .slider-btn:hover {
@@ -241,18 +251,91 @@ h2 {
   align-items: center;
 }
 
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .footer-brand {
   font-size: 16px;
+  font-weight: 500;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #aaa;
 }
 
 .footer-right {
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
 }
 
 .footer-social {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #133636;
+  color: #f2f2f2;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #b45309;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: #b45309;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+  align-self: flex-start;
+}
+
+.form button:hover {
+  background: #f97316;
+}
+
+.muted {
+  color: #aaa;
+  font-size: 14px;
 }
 
 @media (max-width: 768px) {
@@ -268,5 +351,48 @@ h2 {
     flex-direction: column;
     text-align: center;
     gap: 10px;
+  }
+
+  .footer-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .slider {
+    height: 300px;
+  }
+
+  .slider-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .slider-btn.left {
+    left: 6px;
+  }
+
+  .slider-btn.right {
+    right: 6px;
+  }
+
+  .work-card img {
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
   }
 }
